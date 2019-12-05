@@ -8,11 +8,15 @@
       }
     },
     "plugins": [
+      "-sharing",
       "-livereload",
       "image-captions",
       "github",
-      "page-treeview@2.9.8",
-      "editlink"
+      "editlink",
+      "anchors",
+      "donate",
+      "anchor-navigation-ex",
+      "expandable-chapters-small"
     ],
     "pluginsConfig": {
       "image-captions": {
@@ -25,13 +29,18 @@
         "url": "https://github.com/zhangmy163/notes"
       },
       "editlink": {
-        "base": "https://github.com/zhangmy163/notesblob/master/",
+        "base": "https://github.com/zhangmy163/notes/blob/master/",
         "label": "编辑本页"
       },
-      "page-treeview": {
-        "copyright": "Copyright &#169; mingo",
-        "minHeaderCount": "2",
-        "minHeaderDeep": "2"
+      "anchor-navigation-ex": {
+        "showLevel": false
+      },
+      "donate": {
+        "alipay": "./source/images/donate.png",
+        "title": "",
+        "button": "赞赏",
+        "alipayText": " "
       }
+    
     }
   }
