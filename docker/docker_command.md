@@ -52,7 +52,7 @@ docker cp test:/www /tmp/
 
 查看容器日志
 
-`docker logs [-f] <name?或<id?`
+`docker logs [-f] <name>或<id>`
 
 启动容器：
 
