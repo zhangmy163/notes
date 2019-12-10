@@ -1,6 +1,6 @@
-# [镜像](docker_command.md/#镜像)
+# [镜像](docker_command.md/#jing-xiang)
 
-# [容器](docker_command.md/#容器)
+# [容器](docker_command.md/#rong-qi)
 
 # [Registry](docker_command.md/#registry)
 
