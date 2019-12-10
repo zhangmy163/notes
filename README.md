@@ -8,7 +8,12 @@
 
 ![知识体系](./source/images/knowledge.png)
 
-<div align = center>赞赏</div>
+
+|微信|支付宝|
+|:----:|:----:|
+|![赞赏](./source/images/weixin.png)|![赞赏](./source/images/zhifubao.png)|
+
+<!-- <div align = center>赞赏</div>
 <div align = center >
 <img src = "./source/images/donate.png" width = "100" height = "100"  />
-</div>
+</div> -->
