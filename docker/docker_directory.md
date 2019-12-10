@@ -2,6 +2,6 @@
 
 # [容器](docker_command.md/#容器)
 
-# [Registry](docker_command.md/#Registry)
+# [Registry](docker_command.md/#registry)
 
-# [Dockerfile](docker_command.md/#Dockerfile)
+# [Dockerfile](docker_command.md/#dockerfile)
