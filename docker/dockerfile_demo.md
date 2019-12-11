@@ -80,7 +80,7 @@ ENV  PATH="$PATH:$MAVEN_HOME/bin"
 
 # 多阶段构建
 
-### example1：
+### example1
 
 Dockerfile
 ```
@@ -119,7 +119,7 @@ CMD ["dev"]
 
 运行容器
 
-`docker run -d --name run_jdy -p 9521:9521 -t docker.cigdata.cn:5000/run_jdy:$hashnum $envtype $hostip`
+`docker run -d --name run_jdy -p 9521:9521 -t run_jdy:$hashnum $envtype $hostip`
 
 ### example2
 
@@ -156,5 +156,5 @@ CMD ["dev"]
 
 运行容器
 
-`docker run -d --name run_media -p 8088:8088 -t docker.cigdata.cn:5000/run_media:$hashnum $envtype`
+`docker run -d --name run_media -p 8088:8088 -t run_media:$hashnum $envtype`
 
