@@ -96,6 +96,7 @@ OPTIONS说明：
 
 ### VOLUM
 
+参考[样例](dockerfile_demo.md)
 
 > 其他详细命令可参考[官方文档](https://docs.docker.com/engine/reference/builder/)，
  也可以参考[他人整理的文档](https://www.jianshu.com/p/e37225134adf)
@@ -103,7 +104,7 @@ OPTIONS说明：
 
  # Registry
 
- Docker hub： https://hub.docker.com
+Docker hub： https://hub.docker.com
 
 DockerHub 是一个由 Docker 公司运行和管理的基于云的存储库。
 
@@ -126,5 +127,72 @@ DockerHub 是一个由 Docker 公司运行和管理的基于云的存储库。
 先打标记，`docker image tag centos:6 docker.cigdata.cn:5000/centos:6`
 
 再push，`docker push docker.cigdata.cn:5000/centos:6`
+
+### 私服搭建过程
+
+配置有身份验证的docker私服
+
+前提把颁发的证书放在/etc/keys下（keys权限700）
+
+```
+$ cd ~
+$ mkdir auth
+$ docker run \
+  --entrypoint htpasswd \
+  registry:2 -Bbn <username> <password> > auth/htpasswd
+$ docker run -d \
+  -p 5000:5000 \
+  --restart=always \
+  --name registry \
+  -v "$(pwd)"/auth:/auth \
+  -e "REGISTRY_AUTH=htpasswd" \
+  -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" \
+  -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd \
+  -v /etc/keys:/certs \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/server.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/server.key \
+  registry:2
+```
+
+外网浏览器访问：https://docker.cigdata.cn:5000/v2/_catalog ， 账号：xxx，密码：xxx
+
+查看某个镜像的版本：https://docker.cigdata.cn:5000/v2/ubuntu/tags/list
+
+本机登录私服并操作：
+
+本机不能直接docker login 域名，如果想域名登录，可以在hosts文件配置该域名
+
+```
+$ docker login 127.0.0.1:5000
+$ xxx_username
+$ xxx_password
+$ docker image tag centos:6 127.0.0.1:5000/centos:6
+$ docker push 127.0.0.1:5000/centos:6
+```
+
+外部服务器登录私服并操作：
+
+```
+$ docker login docker.cigdata.cn:5000
+$ docker pull docker.cigdata.cn:5000/centos:6
+$ docker image tag ubuntu:latest docker.cigdata.cn:5000/ubuntu:14
+$ docker push docker.cigdata.cn:5000/ubuntu:14
+```
+
+### 删除私服镜像
+
+Registry上传的时候如果断网，就会出现镜像无法重新上传的bug，为了解决此问题，只能删除私服里的镜像了
+
+删除镜像其实有个讨巧的方法，总共两步即可
+
+第一步删除repo
+docker exec <容器名> rm -rf /var/lib/registry/docker/registry/v2/repositories/<镜像名>
+
+第二部清楚掉blob
+docker exec registry bin/registry garbage-collect /etc/docker/registry/config.yml
+
+如此就可继续重新上传镜像了
+
+以上步骤是删除整个私服镜像的，如果删除某个版本有些复杂，后续整理。
 
 搭建私服参考文档： https://docs.docker.com/registry/deploying/
