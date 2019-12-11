@@ -4,6 +4,6 @@
 
 # [vi快捷方式](hot_key.md/#vi-kuai-jie-jian)
 
-# [Linux标准输入输出](in_out_redirect.md/#linux-biaozhun-shuru-shuchu)
+# [Linux标准输入输出](in_out_redirect.md/#linux-biao-zhun-shu-ru-shu-chu)
 
-# [Linux重定向](in_out_redirect.md/#linux-chong-ding-xiang)
+# [Linux重定向](in_out_redirect.md/#linux-zhong-ding-xiang)
