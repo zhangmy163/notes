@@ -14,7 +14,7 @@
   * [Docker基础命令](docker/docker_command.md)
   * [Dockerfile example](docker/dockerfile_demo.md)
 
-* Mysql
-
+* [Mysql](mysql/mysql_directory.md)
+  * [账号权限](mysql/account_permissions.md)
 
 
