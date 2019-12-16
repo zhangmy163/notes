@@ -8,6 +8,7 @@
   * [命令行说明中的括号含义](linux/command_brackets.md)
   * [Linux终端快捷键和vi快捷键](linux/hot_key.md)
   * [Linux标准输入输出和重定向](linux/in_out_redirect.md)
+  * [参数和配置文件处理](linux/para_conf_prossing.md)
 
 * [Docker](docker/docker_directory.md)
 
