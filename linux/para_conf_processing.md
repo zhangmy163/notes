@@ -1,6 +1,28 @@
 # 参数处理
 
-对脚本传参形式为-m xxx -c xxx -s xxx -p xxx的处理
+1.对脚本传参形式为-a 123 -b 234 -c ddd的处理
+
+```
+#!/bin/bash
+while getopts ":a:b:c:" opt
+do
+   case $opt in
+        a)
+        echo "参数a的值$OPTARG"
+        ;;
+        b) echo "参数b的值$OPTARG"
+        ;;
+        c) echo "参数c的值$OPTARG"
+        ;;
+        ?) echo "未知参数"
+           exit 1;;
+   esac
+done
+```
+
+
+
+2.对脚本传参形式为-m 20191216 -c 20101 20202 20303 -s 30101 30202 -p 40401 40402 40403的处理
 
 **注意**：xxx为数字，脚本中grep -q '^[1-9]'有处理，如果参数有其他情况，请修改
 
