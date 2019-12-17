@@ -82,7 +82,7 @@ hash=release_repo123
 
 ```
 $ source dealconf.sh pipeline.conf
-[info]:iniSections size:-3- eles:-nlp spark release_repo-
+[info]:iniSections size:-3- eles:-nlp spark release_repo-   #下面的脚本注释掉了[info]的输出，如果需要可以打开
 $ echo ${iniSections[@]}
 nlp spark release_repo
 
@@ -131,6 +131,7 @@ dealconf.sh
 # write
 #param : -w iniFile section option value  add new element：section option    result:if not --->creat ,have--->update,exist--->do nothing
 #option ,value can not be null
+ 
 #params
 iniFile=$1
 section=$2
@@ -149,23 +150,25 @@ fi
 iniValue='default'
 iniOptions=()
 iniSections=()
+ 
 function checkFile()
 {
     if [ "${iniFile}" = ""  ] || [ ! -f ${iniFile} ];then
         echo "[error]:file --${iniFile}-- not exist!"
     fi
 }
+ 
 function readInIfile()
 {
     if [ "${section}" = "" ];then
         #通过如下两条命令可以解析成一个数组
         allSections=$(awk -F '[][]' '/\[.*]/{print $2}' ${iniFile})
         iniSections=(${allSections// /})
-        echo "[info]:iniSections size:-${#iniSections[@]}- eles:-${iniSections[@]}- "
+#        echo "[info]:iniSections size:-${#iniSections[@]}- eles:-${iniSections[@]}- "
     elif [ "${section}" != "" ] && [ "${option}" = "" ];then
         #判断section是否存在
         allSections=$(awk -F '[][]' '/\[.*]/{print $2}' ${iniFile})
-        echo $allSections|grep ${section} >/dev/null
+        echo $allSections|grep ${section} > /dev/null
         if [ "$?" = "1" ];then
             echo "[error]:section --${section}-- not exist!"
             return 0
@@ -180,13 +183,15 @@ function readInIfile()
               iniOptions[${#iniOptions[@]}]=${i//@G@/ }
           fi
         done
-        echo "[info]:iniOptions size:-${#iniOptions[@]}- eles:-${iniOptions[@]}-"
+#        echo "[info]:iniOptions size:-${#iniOptions[@]}- eles:-${iniOptions[@]}-"
     elif [ "${section}" != "" ] && [ "${option}" != "" ];then
+ 
        # iniValue=`awk -F '=' '/\['${section}'\]/{a=1}a==1&&$1~/'${option}'/{print $2;exit}' $iniFile|sed -e 's/^[ \t]*//g' -e 's/[ \t]*$//g'`
         iniValue=`awk -F '=' "/\[${section}\]/{a=1}a==1" ${iniFile}|sed -e '1d' -e '/^$/d' -e '/^\[.*\]/,$d' -e "/^${option}.*=.*/!d" -e "s/^${option}.*= *//"`
-        echo "[info]:iniValue value:-${iniValue}-"
+#        echo "[info]:iniValue value:-${iniValue}-"
         fi
 }
+ 
 function writeInifile()
 {
     #检查文件
@@ -201,6 +206,7 @@ function writeInifile()
             break
         fi
     done
+ 
     if [ "$sectionFlag" = "0" ];then
         echo "[${section}]" >>${iniFile}
     fi
@@ -219,6 +225,7 @@ function writeInifile()
         echo "[success] add [$iniFile][$section][$option][$value]"
     fi
 }
+ 
 #main
 if [ "${mode}" = "iniR" ];then
     checkFile
