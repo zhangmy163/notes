@@ -10,7 +10,12 @@
 
 # [Linux shell参数传递](linux_shell_para.md)
 
+# [Linux shell一般的参数判断](para_if.md)
+
 # [脚本传入参数处理和配置文件读取](para_conf_processing.md)
+
+# [Linux set命令](linux_set.md)
+
 
 
 
