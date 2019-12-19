@@ -9,7 +9,9 @@
   * [Linux终端快捷键和vi快捷键](linux/hot_key.md)
   * [Linux标准输入输出和重定向](linux/in_out_redirect.md)
   * [Linux shell参数传递](linux/linux_shell_para.md)
+  * [Linux shell一般的参数判断](linux/para_if.md)
   * [参数和配置文件处理](linux/para_conf_processing.md)
+  * [Linux set命令](linux/linux_set.md)
 
 * [Docker](docker/docker_directory.md)
 
