@@ -11,7 +11,9 @@
   * [Linux 引号](linux/quotation_marks.md)
   * [Linux shell逻辑控制](linux/process_control.md)
   * [Linux shell参数传递](linux/linux_shell_para.md)
+  * [Linux shell一般的参数判断](linux/para_if.md)
   * [参数和配置文件处理](linux/para_conf_processing.md)
+  * [Linux set命令](linux/linux_set.md)
 
 * [Docker](docker/docker_directory.md)
 
