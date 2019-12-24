@@ -24,7 +24,7 @@
   * [账号权限](mysql/account_permissions.md)
   * [Mysql升级手册](mysql/mysql_upgrade.md)
 
-* [科学上网]
+* 科学上网
   * [使用AWS的EC2搭建SS科学上网](scientific_internet/ss/aws_build_ss.md)
 
 
