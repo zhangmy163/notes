@@ -324,3 +324,29 @@ root     2756 32635  0 11:06 pts/0   00:00:00 grep mysql
 
 [END] 2018/6/29 11:06:52
 ```
+
+## 潜在问题
+
+1.mysql 5.7.x会默认开启ONLY_FULL_GROUP_BY模式。
+
+对于GROUP BY聚合操作，如果在SELECT中的列，没有在GROUP
+BY中出现，那么这个SQL是不合法的，因为列不在GROUP BY从句中。
+
+以下命令会报错：
+```
+select * from A group by a;
+select a,b from A group by a;
+```
+
+如果想去掉此项设置：
+
+1.检查/etc/my.cnf是否有sql_model的设置，如果有，删除后重启mysql
+
+2.这两个命令，去掉 sql_mode 的 ONLY_FULL_GROUP_BY
+```
+mysql> set global sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+mysql> set session sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+```
+```
+set @@sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
+```
