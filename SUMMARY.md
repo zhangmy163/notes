@@ -23,8 +23,12 @@
 * [Mysql](mysql/mysql_directory.md)
   * [账号权限](mysql/account_permissions.md)
   * [Mysql升级手册](mysql/mysql_upgrade.md)
+  * [mysql的sql_mode合理设置](mysql/mysql_mode.md)
 
 * 科学上网
   * [使用AWS的EC2搭建SS科学上网](scientific_internet/ss/aws_build_ss.md)
+
+
+
 
 
