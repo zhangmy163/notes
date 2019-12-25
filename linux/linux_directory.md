@@ -10,6 +10,8 @@
 
 # [Linux 引号](quotation_marks.md)
 
+# [Linux test命令](linux_test.md)
+
 # [shell逻辑控制](process_control.md)
 
 # [Linux shell参数传递](linux_shell_para.md)
