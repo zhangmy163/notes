@@ -8,13 +8,13 @@
 
 # 查看容器的完整命令
 
-docker ps -a --no-trunc
+`docker ps -a --no-trunc`
 
 # 查看容器运行时的run参数
 
 > https://blog.csdn.net/qq_35462323/article/details/101607062
 
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike 
+`docker run --rm -v /var/run/docker.sock:/var/run/docker.sock assaflavie/runlike <container_name>`
 
 # 把容器打包成镜像
 

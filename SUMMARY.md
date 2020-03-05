@@ -31,7 +31,9 @@
 
   * [使用AWS的EC2搭建SS科学上网](scientific_internet/ss/aws_build_ss.md)
 
+* [Kubernetes](k8s/k8s_directory.md)
 
+  * [k8s介绍](k8s/k8s_readme.md)
 
 
 
