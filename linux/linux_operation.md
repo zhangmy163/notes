@@ -10,16 +10,16 @@ getinfo.sh
 echo "======Linux版本======"
 head -1 /etc/issue
 
-echo "======CPU信息：======"
+echo -e "\r\n======CPU信息：======"
 cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
 
-echo "======内存信息：======"
+echo -e "\r\n======内存信息：======"
 cat /proc/meminfo|grep Total
 
-echo "======内核信息：======"
+echo -e "\r\n======内核信息：======"
 uname -r
 #cat /proc/version
 
-echo "======磁盘信息：======"
+echo -e "\r\n======磁盘信息：======"
 df -h
 ```
