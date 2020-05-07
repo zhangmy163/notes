@@ -10,6 +10,8 @@
 
 # [Linux 引号](quotation_marks.md)
 
+# [Linux—shell中$(( ))、$( )、``与${ }的区别](linux_variable.md)
+
 # [Linux test命令](linux_test.md)
 
 # [shell逻辑控制](process_control.md)
