@@ -15,12 +15,8 @@
   * [Linux shell一般的参数判断](linux/para_if.md)
   * [参数和配置文件处理](linux/para_conf_processing.md)
   * [Linux set命令](linux/linux_set.md)
-  * [Linux shell一般的参数判断](linux/para_if.md)
-  * [脚本传入参数处理和配置文件读取](linux/para_conf_processing.md)
-  * [Linux set命令](linux/linux_set.md)
   * [Linux ssh/scp相关命令及判断](linux/linux_ssh.md)
-
-# [Linux 常用运维命令](linux_operation.md)
+  * [Linux 常用运维命令](linux/linux_operation.md)
 
 * [Docker](docker/docker_directory.md)
 
