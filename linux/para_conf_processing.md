@@ -141,6 +141,8 @@ $ source dealconf.sh -w pipeline.conf testItem  testOption2 testValue4   #重复
 
 脚本代码：
 
+**注意：** 目前脚本取变量时是模糊匹配，如果要精准，需将2处修改`/^${option}.*=`为`/^${option}=`
+
 dealconf.sh
 
 ```
