@@ -94,6 +94,19 @@ OPTIONS说明：
 
 ### ENTRYPOINT
 
+如果调试时想不按ENTRYPOINT设置的启动，则可以在启动容器时增加参数
+
+```
+$ docker run -it --entrypoint /bin/bash example/redis
+
+或两个如何将更多参数传递给该ENTRYPOINT的示例：
+$ docker run -it --entrypoint /bin/bash example/redis -c ls -l
+$ docker run -it --entrypoint /usr/bin/redis-cli example/redis --help
+
+您可以通过传递空字符串来重置容器入口点，例如：
+$ docker run -it --entrypoint="" mysql bash
+```
+
 ### VOLUM
 
 ### EXPOSE
