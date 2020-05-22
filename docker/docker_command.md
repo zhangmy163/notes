@@ -117,25 +117,25 @@ Docker hub： https://hub.docker.com
 
 DockerHub 是一个由 Docker 公司运行和管理的基于云的存储库。
 
-个人账号，免费的可以创建一个私有存储库，
+个人账号，免费的可以创建一个私有存储库，执行`docker login`登录
 
-自己搭建私有仓库：https://docker.cigdata.cn:5000
+自己搭建私有仓库：https://自己的域名:5000
 
-查看镜像： https://docker.cigdata.cn:5000/v2/_catalog
+查看镜像： https://自己的域名:5000/v2/_catalog
 
-查看镜像版本： https://docker.cigdata.cn:5000/v2/test_jdy/tags/list
+查看镜像版本： https://自己的域名:5000/v2/test_jdy/tags/list
 
-登录私有仓库：`docker login docker.cigdata.cn:5000`
+登录私有仓库：`docker login 自己的域名:5000`
 
-登出：`docker logout docker.cigdata.cn:5000`
+登出：`docker logout 自己的域名:5000`
 
-拉取镜像：`docker pull docker.cigdata.cn:5000/centos:6`
+拉取镜像：`docker pull 自己的域名:5000/centos:6`
 
 提交镜像：
 
-先打标记，`docker image tag centos:6 docker.cigdata.cn:5000/centos:6`
+先打标记，`docker image tag centos:6 自己的域名:5000/centos:6`
 
-再push，`docker push docker.cigdata.cn:5000/centos:6`
+再push，`docker push 自己的域名:5000/centos:6`
 
 ### 私服搭建过程
 
@@ -163,9 +163,9 @@ $ docker run -d \
   registry:2
 ```
 
-外网浏览器访问：https://docker.cigdata.cn:5000/v2/_catalog ， 账号：xxx，密码：xxx
+外网浏览器访问：https://自己的域名:5000/v2/_catalog ， 账号：xxx，密码：xxx
 
-查看某个镜像的版本：https://docker.cigdata.cn:5000/v2/ubuntu/tags/list
+查看某个镜像的版本：https://自己的域名:5000/v2/ubuntu/tags/list
 
 本机登录私服并操作：
 
@@ -182,10 +182,10 @@ $ docker push 127.0.0.1:5000/centos:6
 外部服务器登录私服并操作：
 
 ```
-$ docker login docker.cigdata.cn:5000
-$ docker pull docker.cigdata.cn:5000/centos:6
-$ docker image tag ubuntu:latest docker.cigdata.cn:5000/ubuntu:14
-$ docker push docker.cigdata.cn:5000/ubuntu:14
+$ docker login 自己的域名:5000
+$ docker pull 自己的域名:5000/centos:6
+$ docker image tag ubuntu:latest 自己的域名:5000/ubuntu:14
+$ docker push 自己的域名:5000/ubuntu:14
 ```
 
 ### 删除私服镜像

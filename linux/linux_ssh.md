@@ -15,6 +15,12 @@ know_hosts : 已知的主机公钥清单
 
 `ssh-copy-id -i ~/.ssh/id_rsa.pub '-p port user@ip'` 如果使用其他端口，则需要单引号引起来
 
+# 忽略第一次ssh提示的yes输入
+
+`ssh -o StrictHostKeyChecking=no -p port user@ip`
+
+第一次连接成功后，也会在`known_hosts`存入信息
+
 # 判断远程服务器是否有文件
 
 ```

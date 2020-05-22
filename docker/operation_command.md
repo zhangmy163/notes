@@ -29,11 +29,10 @@
 # 给其他用户增加docker运行权限
 
 ```
-sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker 用户名
 
 newgrp docker
 ```
-
 
 # 给运行中的容器追加端口映射
 
@@ -56,3 +55,4 @@ newgrp docker
 `docker update`可以更改一些运行中容器的参数
 
 https://docs.docker.com/engine/reference/commandline/update/
+
