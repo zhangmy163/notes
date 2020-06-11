@@ -38,5 +38,10 @@
 
   * [k8s介绍](k8s/k8s_readme.md)
 
+* [gitlab](gitlab/git_directory.md)
+
+  * [git 命令](gitlab/git_command.md)
 
 
+
+1
