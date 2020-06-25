@@ -15,3 +15,6 @@
 # [使用docker过程中遇到过的问题](docker_question.md)
 
 # [daemon.json](daemon.md)
+
+# [高可用supervisor的使用](supervisor.md)
+

@@ -22,7 +22,14 @@
 
   * [Docker基础命令](docker/docker_command.md)
   * [Dockerfile example](docker/dockerfile_demo.md)
+  * [运维管理的一些命令](docker/operation_command.md)
+  * [监控相关的命令](docker/alarm_command.md)
+  * [高可用](docker/supervisor.md)
   * [使用docker过程中遇到过的问题](docker/docker_question.md)
+
+
+
+# [daemon.json](daemon.md)
 
 * [Mysql](mysql/mysql_directory.md)
 
@@ -41,6 +48,8 @@
 * [gitlab](gitlab/git_directory.md)
 
   * [git 命令](gitlab/git_command.md)
+  * [git custom hooks](gitlab/customhooks.md)
+  * [git一些其他命令](gitlab/git_operation.md)
 
 
 
