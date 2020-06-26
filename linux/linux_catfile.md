@@ -1,5 +1,5 @@
 ```
-$line=($(cat test.txt))
+line=($(cat test.txt))
 ```
 
 ```

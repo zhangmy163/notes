@@ -17,6 +17,8 @@
   * [Linux set命令](linux/linux_set.md)
   * [Linux ssh/scp相关命令及判断](linux/linux_ssh.md)
   * [Linux 常用运维命令](linux/linux_operation.md)
+  * [Linux shell中$(())、$()、``与${}的区别](linux/linux_variable.md)
+  * [Linux读取文件](linux/linux_catfile.md)
 
 * [Docker](docker/docker_directory.md)
 
@@ -26,10 +28,7 @@
   * [监控相关的命令](docker/alarm_command.md)
   * [高可用](docker/supervisor.md)
   * [使用docker过程中遇到过的问题](docker/docker_question.md)
-
-
-
-# [daemon.json](daemon.md)
+  * [daemon.json](daemon.md)
 
 * [Mysql](mysql/mysql_directory.md)
 
