@@ -39,6 +39,7 @@
 * [科学上网](scientific_internet/si_directory.md)
 
   * [使用AWS的EC2搭建SS科学上网](scientific_internet/ss/aws_build_ss.md)
+  * [V2ray](scientific_internet/v2ray/v2ray.md)
 
 * [Kubernetes](k8s/k8s_directory.md)
 
