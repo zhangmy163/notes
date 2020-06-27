@@ -28,7 +28,7 @@
   * [监控相关的命令](docker/alarm_command.md)
   * [高可用](docker/supervisor.md)
   * [使用docker过程中遇到过的问题](docker/docker_question.md)
-  * [daemon.json](daemon.md)
+  * [daemon.json](docker/daemon.md)
 
 * [Mysql](mysql/mysql_directory.md)
 
@@ -50,6 +50,12 @@
   * [git custom hooks](gitlab/customhooks.md)
   * [git一些其他命令](gitlab/git_operation.md)
 
+* [监控](monitor/monitor_directory.md)
 
+  * [zabbix](monitor/zabbix.md)
+
+* [jmeter](jmeter/jmeter_directory.md)
+
+  * [共享cookie](jmeter/cookie.md)
 
 1
