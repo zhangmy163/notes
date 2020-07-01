@@ -76,6 +76,8 @@ sudo netstat -anp|grep 10050
 
 >https://www.zabbix.com/documentation/3.4/zh/manual/quickstart
 
+右上角admin-->语言-->简体中文
+
 配置步骤：  
 1.新建主机  
 2.新建监控项  
@@ -109,7 +111,7 @@ docker exec -it -u root  zabbix-server-mysql apk add  curl
 function dingding() {
 	sendto=$1
 	message=${@:2}
-	url='https://oapi.dingtalk.com/robot/send?access_token=3b3596341ea7330922a765ffe2225c481b5330d632da5e2ac28ec514d19e762b'
+	url='钉钉的webhook地址url'
 
 	JSON='{ "msgtype": "text", "text": { "content":"'"监控：$message"'" } }'
 	echo "$content"
