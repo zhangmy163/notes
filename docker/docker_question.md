@@ -66,3 +66,16 @@ ENV LC_ALL zh_CN.UTF-8
 
 RUN yum groupinstall -y fonts && echo 'LANG="zh_CN.UTF-8"' > /etc/locale.conf && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 ```
+
+# 宿主机可以和docker启动服务通，但是其他机器不能联通
+
+docker日志会有如下内容，重启docker服务，问题解决。
+
+```
+time="2020-07-15T06:40:04.978946770Z" level=warning msg="Running iptables --wait -t nat -L -n failed with message: `iptables v1.4.18: unknown option \"--wait\"\nTry `iptables -h' or 'iptables --help' for more information.`, error: exit status 2"
+time="2020-07-15T06:40:05.059191353Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+time="2020-07-15T06:40:05.188780400Z" level=info msg="Loading containers: done."
+time="2020-07-15T06:40:05.219029807Z" level=info msg="Docker daemon" commit=369ce74 graphdriver(s)=overlay2 version=19.03.6-ce
+time="2020-07-15T06:40:05.219592273Z" level=info msg="Daemon has completed initialization"
+time="2020-07-15T06:40:05.237272658Z" level=info msg="API listen on /var/run/docker.sock"
+```
