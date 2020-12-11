@@ -2,6 +2,7 @@
 * [前言](README.md)
 
 ---
+* [gitbook使用介绍](gitbook/gitbook.md)
 
 * [Linux](linux/linux_directory.md)
 
