@@ -60,4 +60,6 @@
 
   * [共享cookie](jmeter/cookie.md)
 
-1
+* [nginx](nginx/nginx_directory.md)
+  
+  * [基础配置](nginx/nginx_conf.md)
