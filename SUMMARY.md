@@ -49,7 +49,8 @@
 * [gitlab](gitlab/git_directory.md)
 
   * [git 命令](gitlab/git_command.md)
-  * [git custom hooks](gitlab/customhooks.md)
+  * [git client hooks](gitlab/client_hooks.md)
+  * [git server hooks](gitlab/customhooks.md)
   * [git一些其他命令](gitlab/git_operation.md)
 
 * [监控](monitor/monitor_directory.md)
